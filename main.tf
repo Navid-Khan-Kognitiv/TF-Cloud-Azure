@@ -28,6 +28,8 @@ provider "azurerm" {
 data "azurerm_client_config" "current" {}
 
 resource "azurerm_resource_group" "this" {
-  name     = "demo"
+  name     = "devops-toolkit-${var.env}"
   location = var.location
+
+  tags = local.common_tags
 }
