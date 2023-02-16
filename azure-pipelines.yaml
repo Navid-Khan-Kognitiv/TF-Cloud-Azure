@@ -59,18 +59,18 @@ stages:
       displayName: plan ist
       inputs:
         script: terraform plan -input=false
-    # - task: CmdLine@2
-    #   env:
-    #     TF_WORKSPACE: uat
-    #   displayName: plan uat
-    #   inputs:
-    #     script: terraform plan -input=false
-    # - task: CmdLine@2
-    #   env:
-    #     TF_WORKSPACE: prod
-    #   displayName: plan prod
-    #   inputs:
-    #     script: terraform plan -input=false
+    - task: CmdLine@2
+      env:
+        TF_WORKSPACE: uat
+      displayName: plan uat
+      inputs:
+        script: terraform plan -input=false
+    - task: CmdLine@2
+      env:
+        TF_WORKSPACE: prod
+      displayName: plan prod
+      inputs:
+        script: terraform plan -input=false
 
 - stage: deploy_dev
   dependsOn:
