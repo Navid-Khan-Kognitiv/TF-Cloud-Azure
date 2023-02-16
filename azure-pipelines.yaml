@@ -34,7 +34,7 @@ stages:
     - task: CmdLine@2
       displayName: terraform login
       inputs:
-        script: echo 'credentials "app.terraform.io" { token = "$(TF-API-KEY)" }' >$(System.DefaultWorkingDirectory)/.terraformrc
+        script: echo 'credentials "app.terraform.io" { token = "$(TF-API-AZ-KEY)" }' >$(System.DefaultWorkingDirectory)/.terraformrc
     - task: CmdLine@2
       env:
         TF_WORKSPACE: dev
@@ -91,7 +91,7 @@ stages:
           - task: CmdLine@2
             displayName: terraform login
             inputs:
-              script: echo 'credentials "app.terraform.io" { token = "$(TF-API-KEY)" }' >$(System.DefaultWorkingDirectory)/.terraformrc
+              script: echo 'credentials "app.terraform.io" { token = "$(TF-API-AZ-KEY)" }' >$(System.DefaultWorkingDirectory)/.terraformrc
           - task: CmdLine@2
             displayName: init
             inputs:
@@ -120,7 +120,7 @@ stages:
           - task: CmdLine@2
             displayName: terraform login
             inputs:
-              script: echo 'credentials "app.terraform.io" { token = "$(API_KEY)" }' >$(System.DefaultWorkingDirectory)/.terraformrc
+              script: echo 'credentials "app.terraform.io" { token = "$(TF-API-AZ-KEY)" }' >$(System.DefaultWorkingDirectory)/.terraformrc
           - task: CmdLine@2
             displayName: init
             inputs:
@@ -149,7 +149,7 @@ stages:
           - task: CmdLine@2
             displayName: terraform login
             inputs:
-              script: echo 'credentials "app.terraform.io" { token = "$(API_KEY)" }' >$(System.DefaultWorkingDirectory)/.terraformrc
+              script: echo 'credentials "app.terraform.io" { token = "$(TF-API-AZ-KEY)" }' >$(System.DefaultWorkingDirectory)/.terraformrc
           - task: CmdLine@2
             displayName: init
             inputs:
@@ -178,7 +178,7 @@ stages:
           - task: CmdLine@2
             displayName: terraform login
             inputs:
-              script: echo 'credentials "app.terraform.io" { token = "$(API_KEY)" }' >$(System.DefaultWorkingDirectory)/.terraformrc
+              script: echo 'credentials "app.terraform.io" { token = "$(TF-API-AZ-KEY)" }' >$(System.DefaultWorkingDirectory)/.terraformrc
           - task: CmdLine@2
             displayName: init
             inputs:
@@ -207,7 +207,7 @@ stages:
           - task: CmdLine@2
             displayName: terraform login
             inputs:
-              script: echo 'credentials "app.terraform.io" { token = "$(API_KEY)" }' >$(System.DefaultWorkingDirectory)/.terraformrc
+              script: echo 'credentials "app.terraform.io" { token = "$(TF-API-AZ-KEY)" }' >$(System.DefaultWorkingDirectory)/.terraformrc
           - task: CmdLine@2
             displayName: init
             inputs:
@@ -236,7 +236,7 @@ stages:
           - task: CmdLine@2
             displayName: terraform login
             inputs:
-              script: echo 'credentials "app.terraform.io" { token = "$(API_KEY)" }' >$(System.DefaultWorkingDirectory)/.terraformrc
+              script: echo 'credentials "app.terraform.io" { token = "$(TF-API-AZ-KEY)" }' >$(System.DefaultWorkingDirectory)/.terraformrc
           - task: CmdLine@2
             displayName: init
             inputs:
