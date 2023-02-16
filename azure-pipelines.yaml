@@ -53,12 +53,12 @@ stages:
       displayName: plan qa
       inputs:
         script: terraform plan -input=false
-    # - task: CmdLine@2
-    #   env:
-    #     TF_WORKSPACE: ist
-    #   displayName: plan ist
-    #   inputs:
-    #     script: terraform plan -input=false
+    - task: CmdLine@2
+      env:
+        TF_WORKSPACE: ist
+      displayName: plan ist
+      inputs:
+        script: terraform plan -input=false
     # - task: CmdLine@2
     #   env:
     #     TF_WORKSPACE: uat
