@@ -1,5 +1,5 @@
 resource "azurerm_storage_account" "storage" {
-  name                     = "storageaccountname-${var.env}"
+  name                     = "storageaccount${var.env}"
   resource_group_name      = azurerm_resource_group.this.name
   location                 = azurerm_resource_group.this.location
   account_tier             = "Standard"
